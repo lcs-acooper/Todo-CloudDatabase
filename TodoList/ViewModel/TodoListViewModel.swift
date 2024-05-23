@@ -24,21 +24,21 @@ class TodoListViewModel {
     
     // MARK: Functions
     func getTodos() async throws {
+        
+        do {
+            let results: [TodoItem] = try await supabase
+                .from("todos")
+                .select()
+                .execute()
+                .value
             
-            do {
-                let results: [TodoItem] = try await supabase
-                    .from("todos")
-                    .select()
-                    .execute()
-                    .value
-                
-                self.todos = results
-                
-            } catch {
-                debugPrint(error)
-            }
+            self.todos = results
             
+        } catch {
+            debugPrint(error)
         }
+        
+    }
     
     func createToDo(withTitle title: String) {
         
@@ -64,7 +64,7 @@ class TodoListViewModel {
                     .single()       // Ensure just one row is returned
                     .execute()      // Run the query
                     .value          // Automatically decode the JSON into an instance of TodoItem
-
+                
                 // Finally, insert the to-do item instance we just selected back from the
                 // database into the array used by the view model
                 // NOTE: We do this to obtain the id that is automatically assigned by Supabase
@@ -78,11 +78,27 @@ class TodoListViewModel {
     }
     func delete(_ todo: TodoItem) {
         
-        // Remove the provided to-do item from the array
-        todos.removeAll { currentItem in
-            currentItem.id == todo.id
+        // Create a unit of asynchronous work to add the to-do item
+        Task {
+            
+            do {
+                
+                // Run the delete command
+                try await supabase
+                    .from("todos")
+                    .delete()
+                    .eq("id", value: todo.id!)  // Only delete the row whose id
+                    .execute()                  // matches that of the to-do being deleted
+                
+                // Update the list of to-do items held in memory to reflect the deletion
+                try await self.getTodos()
+                
+            } catch {
+                debugPrint(error)
+            }
+            
+            
         }
         
     }
-    
 }
