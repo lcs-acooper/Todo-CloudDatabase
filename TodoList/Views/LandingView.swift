@@ -54,6 +54,8 @@ struct LandingView: View {
                     Button("ADD") {
                         // Add the new to-do item
                         viewModel.createToDo(withTitle: newItemDescription)
+                        // Clear the stored property bound to the imput textfield
+                        newItemDescription = ""
                     }
                     .font(.caption)
                 }

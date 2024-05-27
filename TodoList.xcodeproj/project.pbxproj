@@ -20,6 +20,8 @@
 		DBA8F6F22BFE4BE20098C82F /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DBA8F6F12BFE4BE20098C82F /* Storage */; };
 		DBA8F6F42BFE4BE20098C82F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DBA8F6F32BFE4BE20098C82F /* Supabase */; };
 		DBA8F6F62BFE4F8F0098C82F /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F6F52BFE4F8F0098C82F /* Supabase.swift */; };
+		DBA8F6F82BFF82910098C82F /* AppEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F6F72BFF82910098C82F /* AppEntryView.swift */; };
+		DBA8F6FA2BFF82C10098C82F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F6F92BFF82C10098C82F /* AuthView.swift */; };
 		DBB0623E2BD4764100DFDFC8 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0623D2BD4764100DFDFC8 /* TodoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		815D9D802BC413810050957E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815D9D832BC413810050957E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBA8F6F52BFE4F8F0098C82F /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		DBA8F6F72BFF82910098C82F /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
+		DBA8F6F92BFF82C10098C82F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		DBB0623D2BD4764100DFDFC8 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,8 @@
 			children = (
 				815D9D7E2BC413800050957E /* LandingView.swift */,
 				814A08FB2BC41BC500921E4F /* ItemView.swift */,
+				DBA8F6F72BFF82910098C82F /* AppEntryView.swift */,
+				DBA8F6F92BFF82C10098C82F /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 				DBA8F6F62BFE4F8F0098C82F /* Supabase.swift in Sources */,
 				814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */,
 				814A08FE2BC41C7800921E4F /* TodoItem.swift in Sources */,
+				DBA8F6F82BFF82910098C82F /* AppEntryView.swift in Sources */,
 				815D9D7D2BC413800050957E /* TodoListApp.swift in Sources */,
+				DBA8F6FA2BFF82C10098C82F /* AuthView.swift in Sources */,
 				DBB0623E2BD4764100DFDFC8 /* TodoListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
