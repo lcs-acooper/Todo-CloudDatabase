@@ -23,6 +23,7 @@
 		DBA8F6F82BFF82910098C82F /* AppEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F6F72BFF82910098C82F /* AppEntryView.swift */; };
 		DBA8F6FA2BFF82C10098C82F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F6F92BFF82C10098C82F /* AuthView.swift */; };
 		DBB0623E2BD4764100DFDFC8 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0623D2BD4764100DFDFC8 /* TodoListViewModel.swift */; };
+		DBC1C0E12C0508D900B478AD /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1C0E02C0508D900B478AD /* NewItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DBA8F6F72BFF82910098C82F /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
 		DBA8F6F92BFF82C10098C82F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		DBB0623D2BD4764100DFDFC8 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		DBC1C0E02C0508D900B478AD /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				814A08FB2BC41BC500921E4F /* ItemView.swift */,
 				DBA8F6F72BFF82910098C82F /* AppEntryView.swift */,
 				DBA8F6F92BFF82C10098C82F /* AuthView.swift */,
+				DBC1C0E02C0508D900B478AD /* NewItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC1C0E12C0508D900B478AD /* NewItemView.swift in Sources */,
 				815D9D7F2BC413800050957E /* LandingView.swift in Sources */,
 				DBA8F6F62BFE4F8F0098C82F /* Supabase.swift in Sources */,
 				814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */,
