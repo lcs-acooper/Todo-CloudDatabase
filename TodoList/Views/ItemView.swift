@@ -11,8 +11,8 @@ struct ItemView: View {
     
     @Binding var currentItem: TodoItem
     
-    // Receive a refrence to the viiew model from the parent view
-    @Bindable var viewModel: TodoListViewModel
+    // Access the view model through the environment
+    @Environment(TodoListViewModel.self) var viewModel
     
     var body: some View {
         Label(
@@ -35,11 +35,8 @@ struct ItemView: View {
 }
 
 #Preview {
-    
-    @State var previewsViewModel = TodoListViewModel()
-    
-    return List {
-        ItemView(currentItem: .constant(firstItem), viewModel: previewsViewModel)
-        ItemView(currentItem: .constant(secondItem), viewModel: previewsViewModel)
+    List {
+        ItemView(currentItem: .constant(firstItem))
+        ItemView(currentItem: .constant(secondItem))
     }
 }
