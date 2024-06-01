@@ -119,8 +119,6 @@ class TodoListViewModel {
         return filePath
     }
     
-    
-    
     func downloadTodoItemImage(fromPath path: String) async throws -> TodoItemImage? {
         
         // Attempt to download an image from the provided path
@@ -148,7 +146,20 @@ class TodoListViewModel {
             
             do {
                 
-                // Run the delete command
+                // If an image exists for this to-do item...
+                if let imageURL = todo.imageURL, imageURL.isEmpty == false {
+                    // ... then delete the image from the storage bucket first.
+                    do {
+                        let _ = try await supabase
+                            .storage
+                            .from("todos_images")
+                            .remove(paths: [imageURL])
+                    } catch {
+                        debugPrint(error)
+                    }
+                }
+
+                // Run the delete command to remove to-do item from database table.
                 try await supabase
                     .from("todos")
                     .delete()
